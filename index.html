@@ -4,8 +4,8 @@
     <!-- ================= META & SEO ================= -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Reconstruction | Minimal, Powerful, ₹199</title>
-    <meta name="description" content="A crafted resume reconstruction experience for ₹199. Apple-level polish for your resume: modern layout, precise wording, and ATS-safe structure." />
+    <title>Resume Reconstruction | Sunlit, Precise, ₹199</title>
+    <meta name="description" content="A warm, sunlit resume reconstruction experience for ₹199. Clean layout, precise wording, ATS-safe structure — designed to feel as fresh as a new morning." />
 
     <style>
         /* ================= BASE / RESET ================= */
@@ -14,21 +14,20 @@
         }
 
         :root {
-            --bg: #05060a;
-            --bg-soft: #0b1020;
-            --surface: #0f172a;
-            --surface-soft: #111827;
-            --border-soft: rgba(148, 163, 184, 0.5);
-            --primary: #4f8cff;
-            --primary-soft: rgba(79, 140, 255, 0.2);
-            --primary-strong: #2563eb;
+            --bg: #fffdf7;
+            --bg-soft: #fffaf0;
+            --surface: #ffffff;
+            --surface-soft: #fef7e8;
+            --border-soft: #e5e7eb;
+            --primary: #ffb347;      /* warm sun orange */
+            --primary-strong: #f59e0b;
             --accent: #38bdf8;
-            --text-main: #f9fafb;
-            --text-muted: #9ca3af;
+            --text-main: #111827;
+            --text-muted: #6b7280;
             --radius-lg: 22px;
             --radius-md: 16px;
-            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
-            --shadow-subtle: 0 10px 28px rgba(15, 23, 42, 0.4);
+            --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+            --shadow-subtle: 0 10px 28px rgba(15, 23, 42, 0.08);
             --transition-fast: 0.18s ease-out;
         }
 
@@ -39,7 +38,7 @@
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #020617 0, #020617 35%, #020617 100%);
+            background: radial-gradient(circle at top, #fff7e0 0, #fffdf7 45%, #f9fafb 100%);
             color: var(--text-main);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
@@ -106,17 +105,16 @@
             backdrop-filter: blur(18px);
             background: linear-gradient(
                 to bottom,
-                rgba(5, 6, 10, 0.96),
-                rgba(5, 6, 10, 0.88),
-                rgba(5, 6, 10, 0.75)
+                rgba(255, 250, 240, 0.96),
+                rgba(255, 250, 240, 0.9),
+                rgba(255, 250, 240, 0.8)
             );
-            border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.9);
             transition: box-shadow var(--transition-fast), background var(--transition-fast), transform 0.2s ease-out;
         }
 
         .nav.scrolled {
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.85);
-            transform: translateY(0);
+            box-shadow: 0 10px 30px rgba(148, 163, 184, 0.45);
         }
 
         .nav-inner {
@@ -137,11 +135,11 @@
         .brand-icon {
             width: 32px;
             height: 32px;
-            border-radius: 12px;
+            border-radius: 999px;
             background:
-                radial-gradient(circle at 20% 20%, #ffffff, #d1e4ff 40%, #4f8cff 75%),
-                radial-gradient(circle at 80% 80%, #111827, #020617);
-            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.95);
+                radial-gradient(circle at 30% 30%, #ffffff, #ffe8a3 35%, #ffb347 70%),
+                radial-gradient(circle at 70% 80%, #facc15, #f97316 75%);
+            box-shadow: 0 8px 18px rgba(248, 180, 44, 0.6);
         }
 
         .brand-text {
@@ -149,7 +147,7 @@
             font-size: 0.95rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #e5e7eb;
+            color: #92400e;
         }
 
         .nav-links {
@@ -161,7 +159,7 @@
 
         .nav-links a {
             position: relative;
-            color: var(--text-muted);
+            color: #4b5563;
             font-weight: 500;
         }
 
@@ -173,7 +171,7 @@
             width: 0;
             height: 2px;
             border-radius: 999px;
-            background: var(--primary);
+            background: var(--primary-strong);
             transition: width 0.2s ease-out;
         }
 
@@ -183,16 +181,16 @@
         }
 
         .nav-links a.active {
-            color: #e5e7eb;
+            color: #1f2937;
         }
 
         .nav-cta {
             padding: 0.4rem 0.9rem;
             border-radius: 999px;
-            border: 1px solid var(--primary);
-            color: #e5e7eb;
+            border: 1px solid var(--primary-strong);
+            color: #92400e;
             font-weight: 600;
-            background: radial-gradient(circle at top, var(--primary-soft), rgba(15, 23, 42, 0.9));
+            background: radial-gradient(circle at top, #fff7e0, #ffedd5);
         }
 
         @media (max-width: 780px) {
@@ -212,9 +210,9 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 20% 0%, rgba(79, 140, 255, 0.3), transparent 55%),
-                radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.3), transparent 55%),
-                radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.95), #020617 80%);
+                radial-gradient(circle at 20% 0%, rgba(252, 211, 77, 0.45), transparent 55%),
+                radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.35), transparent 55%),
+                radial-gradient(circle at 50% 100%, #fef3c7, #fdf2e9 80%);
             opacity: 0.9;
             z-index: 0;
         }
@@ -222,7 +220,7 @@
         .hero-orbit-layer {
             position: absolute;
             border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            border: 1px solid rgba(252, 211, 77, 0.3);
             pointer-events: none;
             will-change: transform;
         }
@@ -262,12 +260,12 @@
             gap: 0.4rem;
             padding: 0.22rem 0.8rem;
             border-radius: 999px;
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(148, 163, 184, 0.6);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #fee2b3;
             font-size: 0.78rem;
-            color: var(--text-muted);
-            box-shadow: var(--shadow-subtle);
-            backdrop-filter: blur(18px);
+            color: #92400e;
+            box-shadow: 0 10px 24px rgba(251, 191, 36, 0.3);
+            backdrop-filter: blur(14px);
             margin-bottom: 1.1rem;
         }
 
@@ -284,10 +282,11 @@
             font-weight: 800;
             letter-spacing: -0.035em;
             margin: 0 0 0.6rem;
+            color: #111827;
         }
 
         .hero-title span {
-            background: linear-gradient(135deg, #e5e7eb, #93c5fd, #f9fafb);
+            background: linear-gradient(135deg, #f97316, #eab308);
             -webkit-background-clip: text;
             color: transparent;
         }
@@ -307,12 +306,12 @@
         .hero-price {
             font-size: 1.1rem;
             font-weight: 800;
-            color: #bfdbfe;
+            color: #c05621;
         }
 
         .hero-meta {
             font-size: 0.82rem;
-            color: #6b7280;
+            color: #9ca3af;
             margin-bottom: 1.7rem;
         }
 
@@ -339,9 +338,9 @@
         }
 
         .btn-primary {
-            background: radial-gradient(circle at top, #60a5fa, #2563eb);
-            color: white;
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.8);
+            background: radial-gradient(circle at top, #facc15, #f97316);
+            color: #7c2d12;
+            box-shadow: 0 20px 50px rgba(248, 180, 44, 0.8);
             position: relative;
             overflow: hidden;
         }
@@ -350,7 +349,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 0% 0%, rgba(248, 250, 252, 0.25), transparent 40%);
+            background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.35), transparent 40%);
             opacity: 0;
             transition: opacity 0.2s ease-out;
         }
@@ -361,18 +360,18 @@
 
         .btn-primary:hover {
             transform: translateY(-1px);
-            box-shadow: 0 24px 60px rgba(30, 64, 175, 0.95);
+            box-shadow: 0 24px 60px rgba(217, 119, 6, 0.9);
         }
 
         .btn-ghost {
-            background: rgba(15, 23, 42, 0.75);
-            color: var(--text-main);
-            border: 1px solid rgba(148, 163, 184, 0.8);
+            background: rgba(255, 255, 255, 0.9);
+            color: #374151;
+            border: 1px solid #e5e7eb;
         }
 
         .btn-ghost:hover {
-            background: rgba(15, 23, 42, 0.95);
-            border-color: rgba(156, 163, 175, 1);
+            background: #fffbeb;
+            border-color: #fed7aa;
             transform: translateY(-1px);
         }
 
@@ -382,7 +381,7 @@
         }
 
         .hero-subnote span {
-            color: #e5e7eb;
+            color: #b45309;
             font-weight: 500;
         }
 
@@ -400,10 +399,10 @@
         }
 
         .tilt-card {
-            background: radial-gradient(circle at 0% 0%, rgba(248, 250, 252, 0.1), rgba(15, 23, 42, 0.95));
+            background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.75), #fff7ed);
             border-radius: var(--radius-lg);
             padding: 1.4rem 1.45rem 1.2rem;
-            border: 1px solid var(--border-soft);
+            border: 1px solid #fed7aa;
             box-shadow: var(--shadow-soft);
             position: relative;
             transform-style: preserve-3d;
@@ -417,10 +416,10 @@
             border-radius: inherit;
             background: conic-gradient(
                 from 220deg,
-                rgba(59, 130, 246, 0.9),
-                rgba(56, 189, 248, 0.8),
-                rgba(251, 191, 36, 0.9),
-                rgba(59, 130, 246, 0.9)
+                rgba(251, 191, 36, 0.7),
+                rgba(249, 115, 22, 0.7),
+                rgba(96, 165, 250, 0.7),
+                rgba(251, 191, 36, 0.7)
             );
             opacity: 0;
             filter: blur(20px);
@@ -429,7 +428,7 @@
         }
 
         .tilt-card:hover::before {
-            opacity: 0.28;
+            opacity: 0.35;
         }
 
         .tilt-header {
@@ -443,22 +442,23 @@
             font-size: 0.78rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: #9a3412;
         }
 
         .tilt-pill {
             font-size: 0.68rem;
             padding: 0.1rem 0.6rem;
             border-radius: 999px;
-            background: rgba(22, 163, 74, 0.15);
-            border: 1px solid rgba(34, 197, 94, 0.7);
-            color: #bbf7d0;
+            background: #ecfdf3;
+            border: 1px solid #6ee7b7;
+            color: #166534;
         }
 
         .tilt-title {
             margin: 0.1rem 0 0.5rem;
             font-size: 1.05rem;
             font-weight: 600;
+            color: #7c2d12;
         }
 
         .tilt-copy {
@@ -478,9 +478,9 @@
             font-size: 0.7rem;
             padding: 0.15rem 0.6rem;
             border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.6);
-            color: #e5e7eb;
-            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid #fecaca;
+            color: #9a3412;
+            background: #fff7ed;
         }
 
         .before-after {
@@ -500,21 +500,21 @@
             border-radius: 0.9rem;
             padding: 0.7rem 0.75rem 0.78rem;
             font-size: 0.78rem;
-            border: 1px dashed rgba(148, 163, 184, 0.9);
-            background: rgba(15, 23, 42, 0.9);
+            border: 1px dashed #e5e7eb;
+            background: #f9fafb;
         }
 
         .snippet.bad {
             border-style: dashed;
-            color: #fecaca;
-            background: rgba(127, 29, 29, 0.22);
+            color: #b91c1c;
+            background: #fef2f2;
         }
 
         .snippet.good {
             border-style: solid;
-            border-color: rgba(52, 211, 153, 0.8);
-            color: #bbf7d0;
-            background: rgba(22, 101, 52, 0.24);
+            border-color: #4ade80;
+            color: #166534;
+            background: #ecfdf3;
         }
 
         .snippet-label {
@@ -524,11 +524,11 @@
         }
 
         .snippet-label.bad {
-            color: #fecaca;
+            color: #b91c1c;
         }
 
         .snippet-label.good {
-            color: #bbf7d0;
+            color: #16a34a;
         }
 
         .tilt-footer {
@@ -544,7 +544,7 @@
             bottom: 0.6rem;
             transform: translateX(-50%);
             font-size: 0.75rem;
-            color: #6b7280;
+            color: #9ca3af;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -563,7 +563,7 @@
 
         /* ================= FEATURES ================= */
         .features {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: transparent;
         }
 
         .features-grid {
@@ -597,7 +597,7 @@
 
         .feature-card:hover {
             transform: translateY(4px);
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+            box-shadow: 0 18px 35px rgba(148, 163, 184, 0.4);
         }
 
         .feature-image-wrap {
@@ -628,7 +628,7 @@
             font-size: 0.7rem;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-            color: var(--text-muted);
+            color: #b45309;
             margin-bottom: 0.25rem;
         }
 
@@ -646,7 +646,7 @@
 
         /* ================= PROCESS ================= */
         .process {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: #fffdf7;
         }
 
         .process-grid {
@@ -665,7 +665,7 @@
             background: var(--surface-soft);
             border-radius: var(--radius-md);
             padding: 1.1rem 1.1rem 1.1rem;
-            border: 1px solid rgba(55, 65, 81, 0.9);
+            border: 1px solid #fed7aa;
             position: relative;
             overflow: hidden;
             opacity: 0;
@@ -678,7 +678,7 @@
             top: -8px;
             font-size: 3.4rem;
             font-weight: 800;
-            color: rgba(55, 65, 81, 0.5);
+            color: rgba(252, 211, 77, 0.5);
         }
 
         .step-label {
@@ -688,9 +688,9 @@
             border-radius: 999px;
             padding: 0.1rem 0.6rem;
             font-size: 0.72rem;
-            background: rgba(15, 118, 110, 0.16);
-            color: #a7f3d0;
-            border: 1px solid rgba(45, 212, 191, 0.7);
+            background: #fffbeb;
+            color: #b45309;
+            border: 1px solid #fed7aa;
             margin-bottom: 0.35rem;
         }
 
@@ -707,16 +707,16 @@
 
         /* ================= PRICING ================= */
         .pricing {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: #fffaf0;
         }
 
         .pricing-card {
             max-width: 640px;
             margin: 0 auto;
-            background: radial-gradient(circle at top left, #111827, #020617 80%);
+            background: radial-gradient(circle at top left, #fffbeb, #fee2b3);
             border-radius: var(--radius-lg);
             padding: 1.7rem 1.8rem 1.5rem;
-            border: 1px solid var(--border-soft);
+            border: 1px solid #fed7aa;
             box-shadow: var(--shadow-soft);
             display: grid;
             grid-template-columns: 1.4fr 1fr;
@@ -754,9 +754,9 @@
             font-size: 0.75rem;
             padding: 0.18rem 0.7rem;
             border-radius: 999px;
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(129, 140, 248, 0.6);
-            color: #bfdbfe;
+            background: #fef3c7;
+            border: 1px solid #facc15;
+            color: #b45309;
         }
 
         .pricing-right {
@@ -772,6 +772,7 @@
         .price-main {
             font-size: 2.2rem;
             font-weight: 800;
+            color: #b45309;
         }
 
         .price-main span {
@@ -788,15 +789,15 @@
 
         /* ================= TESTIMONIALS ================= */
         .testimonials {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: radial-gradient(circle at top, #fffbeb, #fffdf7 55%, #fefce8 100%);
         }
 
         .test-gradient {
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.18), transparent 55%),
-                radial-gradient(circle at 100% 100%, rgba(79, 140, 255, 0.2), transparent 55%);
+                radial-gradient(circle at 10% 0%, rgba(252, 211, 77, 0.25), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(96, 165, 250, 0.2), transparent 55%);
             opacity: 0.9;
             z-index: 0;
         }
@@ -819,10 +820,10 @@
         }
 
         .test-card {
-            background: rgba(15, 23, 42, 0.96);
+            background: rgba(255, 255, 255, 0.96);
             border-radius: var(--radius-md);
             padding: 1rem 1.1rem 1rem;
-            border: 1px solid rgba(148, 163, 184, 0.7);
+            border: 1px solid #fed7aa;
             box-shadow: var(--shadow-subtle);
             position: relative;
             opacity: 0;
@@ -834,18 +835,20 @@
             right: 14px;
             top: 8px;
             font-size: 2.1rem;
-            color: rgba(129, 140, 248, 0.7);
+            color: rgba(245, 158, 11, 0.6);
         }
 
         .test-text {
             font-size: 0.9rem;
             font-style: italic;
             margin-bottom: 0.8rem;
+            color: #374151;
         }
 
         .test-name {
             font-size: 0.84rem;
             font-weight: 600;
+            color: #92400e;
         }
 
         .test-role {
@@ -855,7 +858,7 @@
 
         /* ================= FAQ ================= */
         .faq {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: #fffdf7;
         }
 
         .faq-grid {
@@ -866,10 +869,10 @@
         }
 
         .faq-item {
-            background: rgba(15, 23, 42, 0.9);
+            background: #ffffff;
             border-radius: 14px;
             padding: 0.85rem 1rem;
-            border: 1px solid rgba(55, 65, 81, 0.9);
+            border: 1px solid #e5e7eb;
             opacity: 0;
             transform: translateY(18px);
         }
@@ -887,7 +890,7 @@
 
         /* ================= CONTACT ================= */
         .contact {
-            background: radial-gradient(circle at top, #020617, #020617 40%, #020617 100%);
+            background: #fffbeb;
         }
 
         .contact-inner {
@@ -911,7 +914,7 @@
         }
 
         .contact-details a {
-            color: #bfdbfe;
+            color: #b45309;
             text-decoration: underline;
         }
 
@@ -927,9 +930,9 @@
             font-size: 0.76rem;
             padding: 0.18rem 0.7rem;
             border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.7);
-            background: rgba(15, 23, 42, 0.9);
-            color: var(--text-muted);
+            border: 1px solid #fed7aa;
+            background: #fffbeb;
+            color: #b45309;
         }
 
         /* ================= FOOTER ================= */
@@ -938,11 +941,12 @@
             text-align: center;
             font-size: 0.78rem;
             color: var(--text-muted);
-            border-top: 1px solid rgba(31, 41, 55, 0.9);
+            border-top: 1px solid #e5e7eb;
+            background: #fffdf7;
         }
 
         footer span {
-            color: #e5e7eb;
+            color: #92400e;
             margin-left: 0.3rem;
         }
 
@@ -957,11 +961,11 @@
             gap: 0.35rem;
             padding: 0.65rem 1.1rem;
             border-radius: 999px;
-            background: radial-gradient(circle at 0 0, #f9fafb, #4f8cff);
-            color: #020617;
+            background: radial-gradient(circle at 0 0, #ffffff, #ffb347);
+            color: #7c2d12;
             font-size: 0.82rem;
             font-weight: 600;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+            box-shadow: 0 18px 40px rgba(248, 180, 44, 0.8);
             cursor: pointer;
             border: none;
             transform-origin: center;
@@ -999,7 +1003,7 @@
         <div class="nav-inner">
             <div class="brand">
                 <div class="brand-icon"></div>
-                <span class="brand-text">RESUME RECONSTRUCT</span>
+                <span class="brand-text">SUNLIT RESUME</span>
             </div>
             <div class="nav-links" id="nav-links">
                 <a href="#hero" class="active">Overview</a>
@@ -1024,25 +1028,25 @@
                 <div class="hero-left reveal" data-delay="0">
                     <div class="hero-badge">
                         <div class="hero-badge-dot"></div>
-                        <span>From generic to intentional — your resume, reimagined.</span>
+                        <span>Morning-light clarity for your resume — in 48 hours.</span>
                     </div>
 
                     <h1 class="hero-title">
-                        A crafted <span>Resume Reconstruction</span> for just ₹199.
+                        A sunlit <span>Resume Reconstruction</span> for just ₹199.
                     </h1>
 
                     <p class="hero-lead">
-                        Minimal, precise, and designed to feel like a product launch—except the product is your next opportunity.
-                        We rebuild your existing resume so it finally aligns with the roles you actually want.
+                        Think of it as a fresh sunrise for your resume. We rebuild the layout, wording, and structure so it feels
+                        light, intentional, and aligned with where you’re headed.
                     </p>
 
                     <p class="hero-price-line">
-                        One clear price: <span class="hero-price">₹199</span> per resume. No add-ons. No noise.
+                        Flat price: <span class="hero-price">₹199</span> per resume. Nothing hidden behind the horizon.
                     </p>
 
                     <p class="hero-meta">
-                        Best suited for students, freshers, and early-career talent aiming at internships, first jobs, and
-                        clean LinkedIn-ready profiles.
+                        Designed for students, freshers, and early-career talent who want their first impression to feel bright,
+                        clear, and thoughtfully put together.
                     </p>
 
                     <div class="hero-ctas">
@@ -1055,7 +1059,7 @@
                     </div>
 
                     <p class="hero-subnote">
-                        <span>Delivered within 48 hours</span> · PDF + editable version · Optimized for ATS and humans.
+                        <span>48-hour turnaround</span> · PDF + editable file · ATS-aware structure.
                     </p>
                 </div>
 
@@ -1065,20 +1069,20 @@
                         <div class="tilt-card" id="tilt-card">
                             <div class="tilt-header">
                                 <div>
-                                    <div class="tilt-label">Preview the upgrade</div>
-                                    <h2 class="tilt-title">How we rewrite your bullet points</h2>
+                                    <div class="tilt-label">Preview the glow-up</div>
+                                    <h2 class="tilt-title">What we do to your bullet points</h2>
                                 </div>
                                 <div class="tilt-pill">Before → After</div>
                             </div>
                             <p class="tilt-copy">
-                                This is the core of the service: turning vague responsibilities into sharp, achievement-driven
-                                statements—without exaggeration, just clarity.
+                                We don’t “decorate” your resume. We clarify it. Responsibilities turn into clear outcomes, with
+                                language tuned to the roles you’re actually targeting.
                             </p>
 
                             <div class="tilt-badges">
                                 <span class="tilt-badge">Action verbs</span>
-                                <span class="tilt-badge">Impact-first</span>
-                                <span class="tilt-badge">Role-aware</span>
+                                <span class="tilt-badge">Impact first</span>
+                                <span class="tilt-badge">Role-specific</span>
                             </div>
 
                             <div class="before-after">
@@ -1093,15 +1097,15 @@
                                 <div class="snippet good">
                                     <div class="snippet-label good">After</div>
                                     <p style="margin:0;">
-                                        • Increased Instagram engagement by 35% in 3 months by planning weekly campaign calendars.<br />
-                                        • Supported a 4-member marketing team with competitor research and weekly performance reports.
+                                        • Increased Instagram engagement by 35% in 3 months through weekly content calendars.<br />
+                                        • Supported a 4-member marketing team with competitor research and performance reports.
                                     </p>
                                 </div>
                             </div>
 
                             <p class="tilt-footer">
-                                We apply this level of refinement across your entire resume—experience, projects, education,
-                                skills—so everything reads intentional.
+                                The same care is applied to experience, projects, education, and skills — so your whole resume
+                                feels cohesive, not patched together.
                             </p>
                         </div>
                     </div>
@@ -1109,7 +1113,7 @@
             </div>
 
             <div class="scroll-indicator">
-                <span>Scroll to explore</span>
+                <span>Scroll to see more</span>
                 <span>↓</span>
             </div>
         </div>
@@ -1120,7 +1124,8 @@
         <div class="container">
             <h2 class="section-title">What You Get</h2>
             <p class="section-subtitle">
-                This is not just “fixing a template”. It’s a structured reconstruction—design, wording, and hierarchy—all tuned to one thing: clarity.
+                A complete reconstruction — not just a new template. Every part of your resume is re-evaluated through the
+                lens of clarity and relevance.
             </p>
 
             <div class="features-grid">
@@ -1129,11 +1134,11 @@
                         <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1000&q=80" alt="Modern resume layout" />
                     </div>
                     <div class="feature-body">
-                        <div class="feature-tag">Layout · ATS-safe</div>
-                        <h3 class="feature-title">Modern, minimal layout</h3>
+                        <div class="feature-tag">Layout · Structure</div>
+                        <h3 class="feature-title">Bright, minimal layout</h3>
                         <p class="feature-text">
-                            Clean visual hierarchy that feels modern but restrained. No clutter, no playful fonts—just a structure
-                            that hiring managers can scan in seconds and ATS can parse safely.
+                            A clean, airy design that’s easy on the eyes and quick to scan. No heavy blocks, no noisy elements —
+                            just a structure that feels fresh and professional.
                         </p>
                     </div>
                 </article>
@@ -1143,11 +1148,11 @@
                         <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=1000&q=80" alt="Powerful wording" />
                     </div>
                     <div class="feature-body">
-                        <div class="feature-tag">Language · Positioning</div>
-                        <h3 class="feature-title">Precise, impact-led wording</h3>
+                        <div class="feature-tag">Language · Clarity</div>
+                        <h3 class="feature-title">Clear, outcome-led wording</h3>
                         <p class="feature-text">
-                            Each bullet is rewritten with intent: strong verbs, relevant metrics, and domain-appropriate keywords.
-                            Your experience reads like signal, not filler.
+                            We rewrite vague tasks into clear outcomes, using simple, confident wording that sounds like you —
+                            just sharper and more focused.
                         </p>
                     </div>
                 </article>
@@ -1157,11 +1162,11 @@
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1000&q=80" alt="Personalized resume" />
                     </div>
                     <div class="feature-body">
-                        <div class="feature-tag">Alignment · Strategy</div>
-                        <h3 class="feature-title">Tailored to your direction</h3>
+                        <div class="feature-tag">Direction · Fit</div>
+                        <h3 class="feature-title">Aligned with your next move</h3>
                         <p class="feature-text">
-                            We adapt the resume to your intended path—Marketing, Data, Software, Product, Design, and more—so
-                            recruiters see you pointed in a clear direction, not scattered.
+                            Whether it’s Marketing, Data, Software, Product, or Design, we adjust the resume to match that
+                            direction — so recruiters see a clear story, not random experiences.
                         </p>
                     </div>
                 </article>
@@ -1174,7 +1179,7 @@
         <div class="container">
             <h2 class="section-title">How It Works</h2>
             <p class="section-subtitle">
-                A simple, three-step flow. No forms to wrestle with, no dashboards. Just a direct, focused exchange.
+                A simple, three-step flow that keeps you out of complicated portals and forms — just a direct, human service.
             </p>
 
             <div class="process-grid">
@@ -1183,10 +1188,10 @@
                     <div class="step-label">
                         <span>Share your baseline</span>
                     </div>
-                    <h3 class="step-title">Send your current resume—or raw details</h3>
+                    <h3 class="step-title">Send your existing resume or raw details</h3>
                     <p class="step-text">
-                        Email or WhatsApp your existing resume. No resume yet? Just send your education, skills, projects,
-                        internships, and any experience. We turn that into a structured document.
+                        Email or WhatsApp your current resume. If you don’t have one yet, just send your education, skills,
+                        projects, internships, and any experience you’ve got.
                     </p>
                 </div>
 
@@ -1195,10 +1200,10 @@
                     <div class="step-label">
                         <span>We reconstruct</span>
                     </div>
-                    <h3 class="step-title">We redesign, reorder, and rewrite</h3>
+                    <h3 class="step-title">We rebuild layout, order, and wording</h3>
                     <p class="step-text">
-                        We rebuild the layout, section order, and content. Experience and projects are rewritten for clarity
-                        and impact. Skills and tools are reorganized to reflect your target roles.
+                        We refine every section: rewriting bullets, reordering content, clarifying skills, and making sure the
+                        overall flow matches your target roles.
                     </p>
                 </div>
 
@@ -1207,10 +1212,10 @@
                     <div class="step-label">
                         <span>Deliver & refine</span>
                     </div>
-                    <h3 class="step-title">You receive the final resume</h3>
+                    <h3 class="step-title">You receive your sunlit resume</h3>
                     <p class="step-text">
-                        You get a polished PDF plus an editable version. We include notes on how to tweak it per job, so you’re not
-                        locked into a single static version.
+                        You get a polished PDF plus an editable version, along with simple tips on how to tweak it for
+                        different job descriptions going forward.
                     </p>
                 </div>
             </div>
@@ -1220,17 +1225,17 @@
     <!-- ================ PRICING ================= -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Clear, Flat Pricing</h2>
+            <h2 class="section-title">One Clear Price</h2>
             <p class="section-subtitle">
-                No packages, no tiers. One focused service, priced so that students and freshers can actually use it.
+                No confusing tiers, no upsell ladder. Just one honest price that covers the entire reconstruction.
             </p>
 
             <div class="pricing-card reveal" data-delay="0">
                 <div class="pricing-left">
                     <h3>Resume Reconstruction · Single Resume</h3>
                     <p>
-                        Includes layout refresh, content rewriting, ATS-friendly structure, and role alignment. Delivery within
-                        48 hours of receiving your details.
+                        Layout refresh, content rewriting, ATS-safe structure, and role alignment. Usually delivered within 48
+                        hours of receiving your details.
                     </p>
                     <div class="pricing-badges">
                         <span class="pricing-badge">1–2 page resume</span>
@@ -1243,7 +1248,7 @@
                         <span>₹</span>199
                     </div>
                     <div class="price-note">
-                        One-time per resume.<br />No hidden fees. No extra “review charges”.
+                        One-time per resume.<br />No extra “review fee”, no hidden add-ons.
                     </div>
                 </div>
             </div>
@@ -1254,17 +1259,17 @@
     <section class="testimonials" id="testimonials">
         <div class="test-gradient"></div>
         <div class="container test-inner">
-            <h2 class="section-title">What People Experience</h2>
+            <h2 class="section-title">What People Notice</h2>
             <p class="section-subtitle">
-                A few words from job seekers who went from “sending and hoping” to “actually hearing back”.
+                A couple of real reactions from people who went from quietly applying to confidently sending out their resume.
             </p>
 
             <div class="test-grid">
                 <article class="test-card reveal" data-delay="0">
                     <div class="quote-icon">“</div>
                     <p class="test-text">
-                        I got more interview calls in 2 weeks than in the previous 2 months. Same person, same experience—
-                        just presented in a way that finally made sense to recruiters.
+                        I got more responses in two weeks than I had in the two months before. Same experience, but the new
+                        resume made it look clear, focused, and easy to understand.
                     </p>
                     <div class="test-name">Job Seeker</div>
                     <div class="test-role">Transitioning into Marketing</div>
@@ -1273,8 +1278,8 @@
                 <article class="test-card reveal" data-delay="120">
                     <div class="quote-icon">“</div>
                     <p class="test-text">
-                        The resume looked like something designed for a product launch—clean, intentional, and very
-                        professional. For ₹199, this feels like a steal.
+                        It looks like something from a really high-end service, honestly. For ₹199, the design and wording
+                        changes feel way above what I expected.
                     </p>
                     <div class="test-name">Marketing Graduate</div>
                     <div class="test-role">Entry-level Applicant</div>
@@ -1286,34 +1291,34 @@
     <!-- ================ FAQ ================= -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title">Questions, Answered Quietly</h2>
+            <h2 class="section-title">Quick Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item reveal" data-delay="0">
                     <div class="faq-q">Do I need a finished resume already?</div>
                     <div class="faq-a">
-                        No. You can send a rough draft or even just your raw details. We’ll structure and format everything into a
-                        complete resume.
+                        Not at all. You can send a rough draft or just your basic details. We’ll turn that into a structured,
+                        polished resume from scratch.
                     </div>
                 </div>
                 <div class="faq-item reveal" data-delay="80">
-                    <div class="faq-q">How fast will I get my reconstructed resume?</div>
+                    <div class="faq-q">How fast will I get the reconstructed version?</div>
                     <div class="faq-a">
-                        Typically within 48 hours of receiving your existing resume or details. If anything needs clarification,
-                        we’ll ask before finalizing.
+                        Typically within 48 hours of receiving your resume or details. If we need clarification, we’ll ask
+                        before sending your final version.
                     </div>
                 </div>
                 <div class="faq-item reveal" data-delay="160">
                     <div class="faq-q">What formats do I receive?</div>
                     <div class="faq-a">
-                        You receive a ready-to-send PDF plus an editable version (for example: Word or Google Docs), so you can
-                        evolve it as your experience grows.
+                        You receive a ready-to-send PDF plus an editable version (e.g. Word/Google Docs), so you can update it as
+                        you grow.
                     </div>
                 </div>
                 <div class="faq-item reveal" data-delay="240">
-                    <div class="faq-q">Is ₹199 truly all-inclusive?</div>
+                    <div class="faq-q">Is ₹199 really all-inclusive?</div>
                     <div class="faq-a">
-                        Yes. ₹199 covers the full reconstruction for one resume: layout, content, and delivery in two formats.
-                        No upsells. No recurring payments.
+                        Yes. ₹199 covers the entire reconstruction for one resume — design, content, and delivery in both formats.
+                        No extra charges.
                     </div>
                 </div>
             </div>
@@ -1324,10 +1329,10 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-inner reveal" data-delay="0">
-                <h2 class="section-title">Ready When You Are</h2>
+                <h2 class="section-title">Ready for a Fresh Start?</h2>
                 <p class="contact-text">
-                    Send your existing resume—or your raw details—and your target role. We’ll take it from there and return a
-                    version that finally feels intentional.
+                    Share your existing resume (or your raw details) and your target role. We’ll handle the rest and send you
+                    back something you’ll actually feel good about sending.
                 </p>
 
                 <div style="display:flex;justify-content:center;gap:0.8rem;flex-wrap:wrap;">
@@ -1335,21 +1340,21 @@
                     <a href="mailto:your-email@example.com?subject=Resume%20Reconstruction%20-%20₹199" class="btn btn-primary">
                         Email to get started
                     </a>
-                    <!-- Replace WhatsApp number with your own (full international format, no + sign shown in URL) -->
+                    <!-- Replace WhatsApp number with your own (full international format, no + sign in URL) -->
                     <a href="https://wa.me/910000000000?text=Hi%2C%20I%27d%20like%20to%20reconstruct%20my%20resume." target="_blank" class="btn btn-ghost">
                         Chat on WhatsApp
                     </a>
                 </div>
 
                 <p class="contact-details">
-                    Or write directly to <a href="mailto:your-email@example.com">your-email@example.com</a>.
-                    Update these links with your actual contact info before sharing this page.
+                    You can also write to <a href="mailto:your-email@example.com">your-email@example.com</a>.
+                    Remember to replace these placeholders with your actual contact info before you share the page.
                 </p>
 
                 <div class="contact-badges">
                     <span class="contact-badge">Built for students & freshers</span>
                     <span class="contact-badge">First resume or upgrade</span>
-                    <span class="contact-badge">Works great with LinkedIn</span>
+                    <span class="contact-badge">Looks great on LinkedIn too</span>
                 </div>
             </div>
         </div>
@@ -1357,8 +1362,8 @@
 
     <!-- ================ FOOTER ================= -->
     <footer>
-        © 2025 Resume Reconstruction Service — Built with a minimal, Apple-inspired mindset.
-        <span>One quiet upgrade closer to your next role.</span>
+        © 2025 Sunlit Resume Reconstruction Service — Designed like a fresh morning launch.
+        <span>One bright step closer to your next opportunity.</span>
     </footer>
 
     <!-- ================ FLOATING CTA ================= -->
@@ -1435,14 +1440,14 @@
                 const rotateX = -((y - halfH) / halfH) * strength;
 
                 card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(6px)`;
-                card.style.boxShadow = "0 24px 60px rgba(15, 23, 42, 0.9)";
-                card.style.borderColor = "rgba(191, 219, 254,0.8)";
+                card.style.boxShadow = "0 24px 60px rgba(248, 180, 44, 0.65)";
+                card.style.borderColor = "#facc15";
             }
 
             function handleLeave() {
                 card.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0)";
-                card.style.boxShadow = "0 18px 45px rgba(15, 23, 42, 0.75)";
-                card.style.borderColor = "var(--border-soft)";
+                card.style.boxShadow = "0 18px 45px rgba(15, 23, 42, 0.12)";
+                card.style.borderColor = "#fed7aa";
             }
 
             card.addEventListener("mousemove", handleMove);
@@ -1485,6 +1490,7 @@
     </script>
 </body>
 </html>
+
 
 
 
