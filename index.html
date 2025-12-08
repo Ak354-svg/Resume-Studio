@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ============== META & SEO ============== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Reconstruction Service</title>
+    <title>Resume Reconstruction Service | ₹199 Professional Resume Upgrade</title>
+    <meta name="description" content="Professional resume reconstruction for just ₹199. Modern design, powerful wording, ATS-friendly structure, and personalized improvements to help you get more interviews." />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="Professional Resume Reconstruction for ₹199" />
+    <meta property="og:description" content="Upgrade your resume design, content, and impact — affordable, fast, and tailored to your job goals." />
+    <meta property="og:type" content="website" />
 
     <style>
-        /* ------------------------------
-           Base Styles
-        ------------------------------ */
-        * {
+        /* -----------------------------------------
+           RESET & BASE
+        ----------------------------------------- */
+        *, *::before, *::after {
             box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a84ff;
+            --primary-dark: #0052cc;
+            --bg: #f4f6f8;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --card-bg: #ffffff;
+            --accent-soft: rgba(10, 132, 255, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
             line-height: 1.6;
         }
 
@@ -28,180 +49,375 @@
 
         a {
             text-decoration: none;
+            color: inherit;
         }
 
-        /* ------------------------------
-           Layout Helpers
-        ------------------------------ */
+        /* -----------------------------------------
+           LAYOUT HELPERS
+        ----------------------------------------- */
         .container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
         }
 
-        .section {
-            padding: 60px 0;
+        section {
+            padding: 4.5rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 30px;
+            font-size: clamp(1.7rem, 2.3vw, 2rem);
             font-weight: 700;
+            margin-bottom: 2.5rem;
         }
 
-        /* ------------------------------
-           Header / Hero
-        ------------------------------ */
-        header {
-            background: linear-gradient(135deg, #0a84ff, #0060d5);
-            color: #fff;
-            padding: 80px 20px 60px;
+        .section-subtitle {
             text-align: center;
+            max-width: 540px;
+            margin: -1.4rem auto 2.8rem;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+        }
+
+        /* -----------------------------------------
+           NAVBAR
+        ----------------------------------------- */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(14px);
+            background: rgba(244, 246, 248, 0.85);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+        }
+
+        .brand-logo {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 25% 25%, #ffffff, #0a84ff);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            font-size: 0.88rem;
+        }
+
+        .nav-links a {
+            color: #374151;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.3rem;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 999px;
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.84rem;
+        }
+
+        @media (max-width: 720px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* -----------------------------------------
+           HERO SECTION
+        ----------------------------------------- */
+        .hero {
+            background: radial-gradient(circle at top left, #dbeafe 0, #eff6ff 40%, #f9fafb 100%);
+            padding: 4.5rem 0 4rem;
             position: relative;
             overflow: hidden;
         }
 
-        header::before {
-            content: "";
+        .hero-gradient-blob {
             position: absolute;
-            width: 350px;
-            height: 350px;
-            background: rgba(255, 255, 255, 0.08);
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent 60%);
             border-radius: 50%;
-            top: -120px;
-            right: -80px;
+            right: -120px;
+            top: -80px;
             filter: blur(2px);
-            animation: float-bubble 10s infinite alternate;
+            opacity: 0.9;
+            animation: float-slow 12s ease-in-out infinite alternate;
         }
 
-        header::after {
-            content: "";
+        .hero-gradient-blob-2 {
             position: absolute;
             width: 260px;
             height: 260px;
-            background: rgba(255, 255, 255, 0.07);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%);
             border-radius: 50%;
-            bottom: -150px;
-            left: -80px;
+            left: -120px;
+            bottom: -90px;
             filter: blur(2px);
-            animation: float-bubble 12s infinite alternate;
+            opacity: 0.9;
+            animation: float-slow 14s ease-in-out infinite alternate-reverse;
         }
 
-        @keyframes float-bubble {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-20px);
-            }
-        }
-
-        .hero-content {
+        .hero-inner {
             position: relative;
             z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-            animation: fade-down 0.9s ease-out forwards;
-            opacity: 0;
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+            gap: 2.5rem;
+            align-items: center;
         }
 
-        header h1 {
-            margin: 0 0 15px;
-            font-size: 44px;
-            font-weight: 700;
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
         }
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-        .price-highlight {
-            font-weight: 800;
-        }
-
-        .hero-subtext {
-            margin-top: 8px;
-            font-size: 15px;
-            opacity: 0.9;
-        }
-
-        .cta-group {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .cta-btn {
-            background: #fff;
-            color: #0a84ff;
-            padding: 14px 26px;
-            border-radius: 999px;
-            font-size: 17px;
-            font-weight: 600;
+        .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.4rem;
+            padding: 0.22rem 0.65rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.75rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 18px rgba(148, 163, 184, 0.55);
+        }
+
+        .hero-badge span:first-child {
+            font-size: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.1rem, 3vw, 2.7rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-highlight {
+            color: var(--primary);
+        }
+
+        .hero-text {
+            font-size: 0.98rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .hero-price-line {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-price {
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .hero-meta {
+            font-size: 0.82rem;
+            color: #6b7280;
+        }
+
+        .hero-cta-row {
+            margin: 1.8rem 0 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.78rem 1.4rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
         }
 
-        .cta-btn span {
-            font-size: 20px;
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 14px 35px rgba(37, 99, 235, 0.55);
         }
 
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-            background: #0b5ed7;
-            color: #fff;
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            background: var(--primary-dark);
+            box-shadow: 0 16px 40px rgba(30, 64, 175, 0.65);
         }
 
-        .cta-secondary {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            color: #fff;
-            box-shadow: none;
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.85);
+            color: #1f2933;
+            border: 1px solid rgba(148, 163, 184, 0.8);
         }
 
-        .cta-secondary:hover {
-            background: rgba(255, 255, 255, 0.12);
+        .btn-outline:hover {
+            background: #e5efff;
+            border-color: var(--primary);
             transform: translateY(-1px);
         }
 
-        .hero-tagline {
-            margin-top: 25px;
-            font-size: 15px;
-            opacity: 0.9;
+        .hero-trust {
+            margin-top: 1.3rem;
+            font-size: 0.78rem;
+            color: #6b7280;
         }
 
-        .hero-tagline strong {
-            font-weight: 700;
+        .hero-trust strong {
+            color: #111827;
         }
 
-        @keyframes fade-down {
-            from {
-                transform: translateY(-18px);
-                opacity: 0;
+        .hero-side-card {
+            background: #ffffff;
+            border-radius: 1.2rem;
+            padding: 1.3rem 1.3rem 1.1rem;
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+        }
+
+        .hero-side-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.04), rgba(96, 165, 250, 0.12));
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .hero-side-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mini-title {
+            font-size: 0.78rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+            margin-top: 0.8rem;
+        }
+
+        @media (max-width: 520px) {
+            .before-after {
+                grid-template-columns: 1fr;
             }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
         }
 
-        /* ------------------------------
-           Features Section
-        ------------------------------ */
+        .snippet-card {
+            background: #f9fafb;
+            border-radius: 0.9rem;
+            padding: 0.7rem 0.75rem 0.8rem;
+            border: 1px dashed rgba(148, 163, 184, 0.8);
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .snippet-card.good {
+            background: #ecfdf5;
+            border-style: solid;
+            border-color: rgba(16, 185, 129, 0.6);
+            color: #065f46;
+        }
+
+        .snippet-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-size: 0.75rem;
+        }
+
+        .snippet-label.bad {
+            color: #b91c1c;
+        }
+
+        .snippet-label.good {
+            color: #047857;
+        }
+
+        .snippet-label span {
+            font-size: 0.95rem;
+        }
+
+        .hero-side-meta {
+            margin-top: 0.9rem;
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
+        @keyframes float-slow {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-16px); }
+        }
+
+        /* -----------------------------------------
+           FEATURES SECTION
+        ----------------------------------------- */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
+            gap: 1.3rem;
         }
 
         @media (max-width: 900px) {
@@ -210,174 +426,236 @@
             }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 620px) {
             .features-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        .feature-box {
-            background: #fff;
-            padding: 18px 18px 22px;
-            border-radius: 14px;
-            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-            text-align: left;
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
             overflow: hidden;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(148, 163, 184, 0.4);
             position: relative;
-            transform: translateY(10px);
+            transform: translateY(18px);
             opacity: 0;
-            animation: slide-up 0.7s ease-out forwards;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
-        .feature-box:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .feature-box:nth-child(2) {
-            animation-delay: 0.35s;
-        }
-        .feature-box:nth-child(3) {
-            animation-delay: 0.5s;
+        .feature-card:hover {
+            transform: translateY(4px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.23);
         }
 
-        .feature-image-wrapper {
-            border-radius: 10px;
+        .feature-image-wrap {
+            height: 170px;
             overflow: hidden;
-            margin-bottom: 14px;
         }
 
-        .feature-box img {
-            height: 160px;
+        .feature-image-wrap img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            transition: transform 0.45s ease;
         }
 
-        .feature-box:hover img {
-            transform: scale(1.06);
+        .feature-card:hover .feature-image-wrap img {
+            transform: scale(1.07);
         }
 
-        .feature-label {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #0a84ff;
-            background: rgba(10, 132, 255, 0.08);
-            padding: 4px 10px;
+        .feature-body {
+            padding: 0.95rem 1rem 1rem;
+        }
+
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.08rem 0.5rem;
             border-radius: 999px;
-            margin-bottom: 6px;
+            background: rgba(10, 132, 255, 0.08);
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
         }
 
-        .feature-box h3 {
-            margin: 4px 0 8px;
-            font-size: 18px;
+        .feature-title {
+            margin: 0.1rem 0 0.3rem;
+            font-size: 1rem;
             font-weight: 700;
         }
 
-        .feature-box p {
+        .feature-text {
             margin: 0;
-            font-size: 14px;
-            color: #555;
+            font-size: 0.84rem;
+            color: var(--text-muted);
         }
 
-        @keyframes slide-up {
-            from {
-                transform: translateY(18px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* ------------------------------
-           Process / How It Works
-        ------------------------------ */
-        .process-section {
+        /* -----------------------------------------
+           PROCESS SECTION
+        ----------------------------------------- */
+        .process {
             background: #ffffff;
         }
 
-        .process-steps {
+        .process-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
+            gap: 1.3rem;
         }
 
         @media (max-width: 900px) {
-            .process-steps {
+            .process-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        .step {
-            background: #f8fafc;
-            border-radius: 14px;
-            padding: 18px 18px 22px;
-            border: 1px solid #e2e8f0;
+        .step-card {
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 1.1rem 1.1rem 1rem;
+            border: 1px solid #e5e7eb;
             position: relative;
             overflow: hidden;
-            animation: fade-in 0.8s ease-out forwards;
             opacity: 0;
-        }
-
-        .step:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .step:nth-child(2) {
-            animation-delay: 0.35s;
-        }
-        .step:nth-child(3) {
-            animation-delay: 0.5s;
+            transform: translateY(18px);
         }
 
         .step-number {
             position: absolute;
-            top: -24px;
-            right: -10px;
-            font-size: 64px;
+            top: -14px;
+            right: 12px;
+            font-size: 3.4rem;
             font-weight: 800;
-            color: rgba(148, 163, 184, 0.2);
+            color: rgba(148, 163, 184, 0.25);
         }
 
         .step-title {
-            font-size: 17px;
+            font-size: 0.98rem;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 0.3rem;
         }
 
-        .step-body {
-            font-size: 14px;
+        .step-text {
+            font-size: 0.84rem;
             color: #4b5563;
         }
 
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        .step-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            border-radius: 999px;
+            padding: 0.1rem 0.55rem;
+            background: #e0f2fe;
+            color: #075985;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        /* -----------------------------------------
+           PRICING SECTION
+        ----------------------------------------- */
+        .pricing {
+            background: #f9fafb;
+        }
+
+        .pricing-card {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #0f172a;
+            color: #e5e7eb;
+            border-radius: 1.5rem;
+            padding: 1.6rem 1.6rem 1.4rem;
+            box-shadow: 0 22px 50px rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 720px) {
+            .pricing-card {
+                grid-template-columns: 1fr;
             }
         }
 
-        /* ------------------------------
-           Testimonials
-        ------------------------------ */
-        .testimonials-section {
-            background: #0f172a;
+        .pricing-left h3 {
+            margin: 0 0 0.45rem;
+            font-size: 1.05rem;
+        }
+
+        .pricing-left p {
+            margin: 0;
+            font-size: 0.84rem;
+            color: #cbd5f5;
+        }
+
+        .pricing-right {
+            text-align: right;
+        }
+
+        @media (max-width: 720px) {
+            .pricing-right {
+                text-align: left;
+            }
+        }
+
+        .price-main {
+            font-size: 2.1rem;
+            font-weight: 800;
+        }
+
+        .price-main span {
+            font-size: 1.1rem;
+            vertical-align: super;
+            margin-right: 2px;
+        }
+
+        .price-note {
+            font-size: 0.76rem;
+            color: #9ca3af;
+        }
+
+        .pricing-badges {
+            margin-top: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .pricing-badge {
+            font-size: 0.72rem;
+            padding: 0.12rem 0.55rem;
+            border-radius: 999px;
+            background: rgba(15, 118, 110, 0.15);
+            border: 1px solid rgba(45, 212, 191, 0.5);
+            color: #a7f3d0;
+        }
+
+        /* -----------------------------------------
+           TESTIMONIALS SECTION
+        ----------------------------------------- */
+        .testimonials {
+            background: radial-gradient(circle at top, #0f172a, #020617);
             color: #e5e7eb;
             position: relative;
             overflow: hidden;
         }
 
-        .testimonials-section::before {
+        .testimonials::before {
             content: "";
             position: absolute;
             inset: 0;
             background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 60%),
-                        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.2), transparent 55%);
+                        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.22), transparent 55%);
             opacity: 0.9;
         }
 
@@ -386,346 +664,442 @@
             z-index: 1;
         }
 
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .testimonials-header h2 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        .testimonials-header p {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #cbd5f5;
-        }
-
-        .testimonials-grid {
+        .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
+            gap: 1.3rem;
         }
 
         @media (max-width: 800px) {
-            .testimonials-grid {
+            .testimonial-grid {
                 grid-template-columns: 1fr;
             }
         }
 
         .testimonial-card {
-            background: rgba(15, 23, 42, 0.85);
-            border-radius: 16px;
-            padding: 18px 18px 20px;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(148, 163, 184, 0.3);
+            background: rgba(15, 23, 42, 0.92);
+            border-radius: 1.1rem;
+            padding: 1rem 1.1rem 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
             position: relative;
-            overflow: hidden;
-            transform: translateY(10px);
             opacity: 0;
-            animation: slide-up 0.9s ease-out forwards;
-        }
-
-        .testimonial-card:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .testimonial-card:nth-child(2) {
-            animation-delay: 0.35s;
-        }
-
-        .testimonial-quote {
-            font-style: italic;
-            margin-bottom: 12px;
-            font-size: 15px;
-            color: #e5e7eb;
-        }
-
-        .testimonial-name {
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .testimonial-role {
-            font-size: 13px;
-            color: #9ca3af;
+            transform: translateY(18px);
         }
 
         .quote-icon {
             position: absolute;
-            top: 14px;
-            right: 18px;
-            font-size: 42px;
-            color: rgba(96, 165, 250, 0.35);
+            top: 8px;
+            right: 12px;
+            font-size: 2.1rem;
+            color: rgba(129, 140, 248, 0.6);
         }
 
-        /* ------------------------------
-           Pricing Highlight
-        ------------------------------ */
-        .pricing-highlight {
-            background: #ffffff;
+        .testimonial-text {
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 0.8rem;
         }
 
-        .pricing-card {
-            max-width: 520px;
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 0.84rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.78rem;
+            color: #9ca3af;
+        }
+
+        /* -----------------------------------------
+           FAQ SECTION
+        ----------------------------------------- */
+        .faq-grid {
+            max-width: 700px;
             margin: 0 auto;
-            background: #0a84ff;
-            color: #fff;
-            border-radius: 18px;
-            padding: 22px 24px 26px;
-            box-shadow: 0 16px 40px rgba(37, 99, 235, 0.5);
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 18px;
-            align-items: center;
+            gap: 0.85rem;
         }
 
-        @media (max-width: 700px) {
-            .pricing-card {
-                grid-template-columns: 1fr;
-            }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 0.9rem;
+            padding: 0.75rem 0.9rem;
+            border: 1px solid #e5e7eb;
+            font-size: 0.86rem;
+            opacity: 0;
+            transform: translateY(18px);
         }
 
-        .pricing-text h3 {
-            margin: 0 0 6px;
-            font-size: 20px;
+        .faq-q {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
         }
 
-        .pricing-text p {
-            margin: 0;
-            font-size: 14px;
-            opacity: 0.95;
+        .faq-a {
+            color: #4b5563;
         }
 
-        .pricing-number {
-            text-align: right;
+        /* -----------------------------------------
+           CONTACT / CTA SECTION
+        ----------------------------------------- */
+        .contact {
+            background: #eff6ff;
         }
 
-        @media (max-width: 700px) {
-            .pricing-number {
-                text-align: left;
-            }
-        }
-
-        .amount {
-            font-size: 32px;
-            font-weight: 800;
-        }
-
-        .currency {
-            font-size: 18px;
-            vertical-align: super;
-            margin-right: 2px;
-        }
-
-        .note {
-            font-size: 12px;
-            opacity: 0.9;
-        }
-
-        /* ------------------------------
-           Contact / CTA Section
-        ------------------------------ */
-        .contact-section {
+        .contact-inner {
+            max-width: 640px;
+            margin: 0 auto;
             text-align: center;
-            background: #f9fafb;
         }
 
-        .contact-subtext {
-            margin: 10px 0 24px;
-            font-size: 14px;
-            color: #555;
+        .contact-text {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin: 0.6rem 0 1.4rem;
         }
 
-        .contact-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 14px;
-            color: #0a84ff;
+        .contact-details {
+            margin-top: 0.8rem;
+            font-size: 0.84rem;
+            color: #374151;
+        }
+
+        .contact-details a {
+            color: var(--primary-dark);
             text-decoration: underline;
         }
 
-        /* ------------------------------
-           Footer
-        ------------------------------ */
+        .contact-badges {
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.65rem;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.08);
+            color: #1d4ed8;
+            border: 1px solid rgba(129, 140, 248, 0.5);
+        }
+
+        /* -----------------------------------------
+           FOOTER
+        ----------------------------------------- */
         footer {
-            background: #0a84ff;
+            background: #020617;
+            color: #9ca3af;
             text-align: center;
-            padding: 18px 20px;
-            color: white;
-            font-size: 13px;
+            padding: 1.1rem 0.75rem 1.2rem;
+            font-size: 0.75rem;
         }
 
         footer span {
             display: inline-block;
-            margin-left: 4px;
+            margin-left: 0.3rem;
+            color: #e5e7eb;
         }
 
-        /* ------------------------------
-           Smooth Scroll
-        ------------------------------ */
-        html {
-            scroll-behavior: smooth;
+        /* -----------------------------------------
+           REVEAL ANIMATIONS (JS + CSS)
+        ----------------------------------------- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-
 <body>
 
-    <!-- =========================
-         HERO / HEADER
-    ========================== -->
-    <header>
-        <div class="hero-content">
-            <h1>Professional Resume Reconstruction</h1>
-            <p>
-                Transform your resume for just
-                <span class="price-highlight">₹199</span> — get more interviews and stand out instantly.
-            </p>
-            <p class="hero-subtext">
-                Especially crafted for students, freshers, and early-career professionals who want a resume that actually gets noticed.
-            </p>
-
-            <div class="cta-group">
-                <a href="#contact" class="cta-btn">
-                    <span>🚀</span> Contact to Get Started
-                </a>
-                <a href="#features" class="cta-btn cta-secondary">
-                    View What’s Included
-                </a>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <span>Resume Reconstruction</span>
             </div>
+            <div class="nav-links">
+                <a href="#features">What You Get</a>
+                <a href="#process">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Results</a>
+                <a href="#contact" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
 
-            <p class="hero-tagline">
-                <strong>Turn a basic resume into a recruiter-ready one</strong> — in less than 48 hours.
-            </p>
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+        <div class="hero-gradient-blob"></div>
+        <div class="hero-gradient-blob-2"></div>
+
+        <div class="container">
+            <div class="hero-inner">
+                <!-- LEFT: TEXT -->
+                <div class="hero-left reveal">
+                    <div class="hero-badge">
+                        <span>✨</span>
+                        <span>From “okay” resume to recruiter-ready — in 48 hours</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Professional <span class="hero-highlight">Resume Reconstruction</span> for just ₹199
+                    </h1>
+
+                    <p class="hero-text">
+                        We transform your existing resume into a clean, modern, and ATS-friendly version that actually
+                        speaks the language recruiters and hiring managers look for.
+                    </p>
+
+                    <p class="hero-price-line">
+                        One-time investment: <span class="hero-price">₹199</span> — no recurring fees, no hidden costs.
+                    </p>
+
+                    <p class="hero-meta">
+                        Perfect for students, freshers, and early-career professionals applying for internships, first jobs,
+                        and entry-level roles.
+                    </p>
+
+                    <div class="hero-cta-row">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>🚀</span> Contact to Get Started
+                        </a>
+                        <a href="#features" class="btn btn-outline">
+                            View What’s Included
+                        </a>
+                    </div>
+
+                    <p class="hero-trust">
+                        <strong>Bonus:</strong> Get your resume in both PDF & editable format, plus tips for customizing it for future job roles.
+                    </p>
+                </div>
+
+                <!-- RIGHT: BEFORE/AFTER CARD -->
+                <div class="hero-right reveal">
+                    <div class="hero-side-card">
+                        <div class="hero-side-inner">
+                            <p class="mini-title">Example Upgrade</p>
+                            <h2 style="margin:0 0 0.3rem;font-size:1rem;">See how we rewrite your bullet points</h2>
+                            <p style="margin:0;font-size:0.82rem;color:#4b5563;">
+                                A quick glimpse of how a basic task list becomes a strong achievement-focused statement.
+                            </p>
+
+                            <div class="before-after">
+                                <div class="snippet-card">
+                                    <div class="snippet-label bad">
+                                        <span>⚠️</span> Before
+                                    </div>
+                                    <p style="margin:0;">
+                                        • Responsible for social media posts<br />
+                                        • Helped with marketing tasks<br />
+                                        • Worked on reports
+                                    </p>
+                                </div>
+                                <div class="snippet-card good">
+                                    <div class="snippet-label good">
+                                        <span>✅</span> After
+                                    </div>
+                                    <p style="margin:0;">
+                                        • Increased Instagram engagement by 35% in 3 months by planning weekly content campaigns.<br />
+                                        • Supported a 4-member marketing team with competitor analysis and weekly performance reports.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="hero-side-meta">
+                                We apply this style of improvement across your entire resume — design, structure, and wording.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- =========================
-         FEATURES
-    ========================== -->
-    <section class="section" id="features">
+    <!-- ===================== FEATURES ===================== -->
+    <section id="features">
         <div class="container">
             <h2 class="section-title">What You Get</h2>
+            <p class="section-subtitle">
+                Every resume is rebuilt from the ground up — not just visually, but strategically.
+                Here’s what’s included in your ₹199 upgrade.
+            </p>
 
             <div class="features-grid">
-                <article class="feature-box">
-                    <span class="feature-label">Design</span>
-                    <div class="feature-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f" alt="Modern resume design" />
+                <article class="feature-card reveal">
+                    <div class="feature-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80" alt="Modern resume design" />
                     </div>
-                    <h3>Modern Resume Design</h3>
-                    <p>
-                        Clean, ATS-friendly formatting that passes screening systems while still looking polished to hiring managers.
-                    </p>
+                    <div class="feature-body">
+                        <div class="feature-tag">
+                            <span>📄</span>
+                            <span>Design</span>
+                        </div>
+                        <h3 class="feature-title">Modern, ATS-friendly Layout</h3>
+                        <p class="feature-text">
+                            Clean structure that passes Applicant Tracking Systems while still looking polished and
+                            professional to human recruiters.
+                        </p>
+                    </div>
                 </article>
 
-                <article class="feature-box">
-                    <span class="feature-label">Content</span>
-                    <div class="feature-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51" alt="Powerful resume wording" />
+                <article class="feature-card reveal">
+                    <div class="feature-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=900&q=80" alt="Powerful resume wording" />
                     </div>
-                    <h3>Powerful Wording</h3>
-                    <p>
-                        Impactful bullet points that highlight your achievements using metrics, action verbs, and role-specific keywords.
-                    </p>
+                    <div class="feature-body">
+                        <div class="feature-tag">
+                            <span>✍️</span>
+                            <span>Content</span>
+                        </div>
+                        <h3 class="feature-title">Strong, Impactful Wording</h3>
+                        <p class="feature-text">
+                            Action-based bullet points that highlight your impact, use the right keywords, and avoid
+                            generic “responsible for” type phrases.
+                        </p>
+                    </div>
                 </article>
 
-                <article class="feature-box">
-                    <span class="feature-label">Strategy</span>
-                    <div class="feature-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Personalized resume improvements" />
+                <article class="feature-card reveal">
+                    <div class="feature-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Personalized resume improvements" />
                     </div>
-                    <h3>Personalized Improvements</h3>
-                    <p>
-                        We tailor your resume according to your target job roles, industry, and experience level for maximum relevance.
-                    </p>
+                    <div class="feature-body">
+                        <div class="feature-tag">
+                            <span>🎯</span>
+                            <span>Strategy</span>
+                        </div>
+                        <h3 class="feature-title">Personalized to Your Goals</h3>
+                        <p class="feature-text">
+                            We align your resume to your target roles (e.g. Marketing, Data, Software, Product, Design),
+                            highlighting the skills that matter most in that field.
+                        </p>
+                    </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- =========================
-         PROCESS / HOW IT WORKS
-    ========================== -->
-    <section class="section process-section" id="process">
+    <!-- ===================== PROCESS ===================== -->
+    <section id="process" class="process">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">
+                Simple, fast, and structured. You don’t need to figure everything out alone — we guide you at each step.
+            </p>
 
-            <div class="process-steps">
-                <div class="step">
+            <div class="process-grid">
+                <div class="step-card reveal">
                     <div class="step-number">01</div>
-                    <div class="step-title">Share Your Current Resume</div>
-                    <p class="step-body">
-                        Send us your existing resume (even if it’s messy or outdated). If you don’t have one, we’ll guide you on what basic details to share.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <div class="step-title">We Reconstruct & Optimize</div>
-                    <p class="step-body">
-                        We rebuild your resume’s structure, content, and design — making it ATS-friendly, concise, and aligned with your target roles.
-                    </p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <div class="step-title">Get Your Final Resume</div>
-                    <p class="step-body">
-                        Receive a polished resume in PDF and editable format, plus suggestions on how to adapt it for future job applications.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================
-         PRICING HIGHLIGHT
-    ========================== -->
-    <section class="section pricing-highlight">
-        <div class="container">
-            <div class="pricing-card">
-                <div class="pricing-text">
-                    <h3>All of this for a one-time fee</h3>
-                    <p>
-                        No recurring costs. No hidden charges. Just a clear, high-impact resume that you can keep updating as your career grows.
-                    </p>
-                </div>
-                <div class="pricing-number">
-                    <div class="amount">
-                        <span class="currency">₹</span>199
+                    <div class="step-chip">
+                        <span>📎</span>
+                        <span>Share details</span>
                     </div>
-                    <div class="note">Per resume · Includes design + content upgrade</div>
+                    <h3 class="step-title">Send your current resume (or details)</h3>
+                    <p class="step-text">
+                        Share your existing resume as a PDF/Word file. If you don’t have one, we’ll ask for basic details
+                        like education, projects, internships, and skills.
+                    </p>
+                </div>
+
+                <div class="step-card reveal">
+                    <div class="step-number">02</div>
+                    <div class="step-chip">
+                        <span>🧠</span>
+                        <span>We reconstruct</span>
+                    </div>
+                    <h3 class="step-title">We redesign, rewrite & optimize</h3>
+                    <p class="step-text">
+                        We rebuild your resume layout, structure, and content — making it concise, readable, and targeted.
+                        This includes rewriting bullet points and reorganizing sections.
+                    </p>
+                </div>
+
+                <div class="step-card reveal">
+                    <div class="step-number">03</div>
+                    <div class="step-chip">
+                        <span>📤</span>
+                        <span>Final output</span>
+                    </div>
+                    <h3 class="step-title">Get your final resume delivered</h3>
+                    <p class="step-text">
+                        You receive a polished resume in both PDF and editable format, along with quick tips on how to tweak
+                        it for different job applications.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =========================
-         TESTIMONIALS
-    ========================== -->
-    <section class="section testimonials-section" id="testimonials">
-        <div class="container testimonials-inner">
-            <div class="testimonials-header">
-                <h2>What Clients Say</h2>
-                <p>Real experiences from job seekers who upgraded their resumes.</p>
-            </div>
+    <!-- ===================== PRICING ===================== -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">
+                No upsells, no confusing packages. One high-value service at an affordable fixed price.
+            </p>
 
-            <div class="testimonials-grid">
-                <article class="testimonial-card">
+            <div class="pricing-card reveal">
+                <div class="pricing-left">
+                    <h3>Resume Reconstruction – Complete Upgrade</h3>
+                    <p>
+                        Includes design refresh, content rewriting, ATS-friendly formatting, and alignment with your target
+                        job role — all delivered within 48 hours of receiving your details.
+                    </p>
+
+                    <div class="pricing-badges">
+                        <span class="pricing-badge">✔ 1–2 page resume</span>
+                        <span class="pricing-badge">✔ PDF + editable file</span>
+                        <span class="pricing-badge">✔ ATS-optimized layout</span>
+                    </div>
+                </div>
+                <div class="pricing-right">
+                    <div class="price-main">
+                        <span>₹</span>199
+                    </div>
+                    <div class="price-note">
+                        One-time payment per resume.<br />
+                        No recurring fees · No hidden charges.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section id="testimonials" class="testimonials">
+        <div class="container testimonials-inner">
+            <h2 class="section-title" style="color:#f9fafb;">What Clients Say</h2>
+            <p class="section-subtitle" style="color:#cbd5f5;">
+                Real feedback from job seekers and graduates who upgraded their resumes with this service.
+            </p>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card reveal">
                     <div class="quote-icon">“</div>
-                    <p class="testimonial-quote">
-                        I got more responses in 2 weeks than I did in 2 months before. The new resume felt sharp, focused, and actually aligned with the roles I wanted.
+                    <p class="testimonial-text">
+                        I got more responses in 2 weeks than I did in 2 months before. The resume felt sharper, more
+                        focused, and truly matched the kind of marketing roles I was applying for.
                     </p>
                     <div class="testimonial-name">Job Seeker</div>
                     <div class="testimonial-role">Transitioning to Marketing</div>
                 </article>
 
-                <article class="testimonial-card">
+                <article class="testimonial-card reveal">
                     <div class="quote-icon">“</div>
-                    <p class="testimonial-quote">
-                        The resume looked so professional. For just ₹199, it felt like something I would get from a premium service. Definitely worth it.
+                    <p class="testimonial-text">
+                        The resume looked so professional. For just ₹199, it honestly felt like something I would have
+                        got from a premium, high-priced service. 100% worth it.
                     </p>
                     <div class="testimonial-name">Marketing Graduate</div>
                     <div class="testimonial-role">Entry-Level Applicant</div>
@@ -734,38 +1108,113 @@
         </div>
     </section>
 
-    <!-- =========================
-         CONTACT / FINAL CTA
-    ========================== -->
-    <section class="section contact-section" id="contact">
+    <!-- ===================== FAQ ===================== -->
+    <section id="faq">
         <div class="container">
-            <h2 class="section-title">Ready to Upgrade Your Resume?</h2>
-            <p class="contact-subtext">
-                Share your existing resume and your target job role, and we’ll take care of the rest.
-                Perfect for fresher, internship, and first-job applications.
-            </p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item reveal">
+                    <div class="faq-q">Do I need to already have a resume?</div>
+                    <div class="faq-a">
+                        No. If you don’t have a resume yet, we’ll ask for your details (education, skills, projects,
+                        internships, achievements) and build one from scratch.
+                    </div>
+                </div>
 
-            <a href="#!" class="cta-btn">
-                <span>📩</span> Contact to Get Started
-            </a>
+                <div class="faq-item reveal">
+                    <div class="faq-q">How long does the whole process take?</div>
+                    <div class="faq-a">
+                        Once you share your existing resume or details, you typically receive the reconstructed resume
+                        within 48 hours.
+                    </div>
+                </div>
 
-            <p class="contact-subtext">
-                Prefer chatting first? Reach out via WhatsApp or email and we’ll quickly walk you through the process.
-            </p>
+                <div class="faq-item reveal">
+                    <div class="faq-q">What file formats will I receive?</div>
+                    <div class="faq-a">
+                        You’ll receive a ready-to-send PDF file plus an editable version (for example Word/Google Docs),
+                        so you can update it anytime in future.
+                    </div>
+                </div>
 
-            <a href="#!" class="contact-link">Get contact details</a>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Is ₹199 the final price?</div>
+                    <div class="faq-a">
+                        Yes. ₹199 is the all-inclusive price for one resume reconstruction. No extra taxes, no hidden
+                        charges, no add-on fees.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- ===================== CONTACT / CTA ===================== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-inner reveal">
+                <h2 class="section-title">Ready to Upgrade Your Resume?</h2>
+                <p class="contact-text">
+                    Share your existing resume and your target job role. We’ll handle the design, wording, and structure —
+                    and send you a recruiter-ready version within 48 hours.
+                </p>
+
+                <div style="display:flex;justify-content:center;gap:0.7rem;flex-wrap:wrap;">
+                    <!-- Replace href values with your actual contact details -->
+                    <a href="mailto:your-email@example.com?subject=Resume%20Reconstruction%20₹199" class="btn btn-primary">
+                        <span>📩</span> Email to Get Started
+                    </a>
+                    <a href="https://wa.me/910000000000" target="_blank" class="btn btn-outline">
+                        <span>💬</span> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <p class="contact-details">
+                    You can also reach out manually at
+                    <a href="mailto:your-email@example.com">your-email@example.com</a>.
+                    Replace the placeholders above with your real contact details when you’re ready.
+                </p>
+
+                <div class="contact-badges">
+                    <span class="contact-badge">Perfect for students & freshers</span>
+                    <span class="contact-badge">Great for LinkedIn-ready resumes too</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
     <footer>
         © 2025 Resume Reconstruction Service — Built with ❤️
         <span>Helping you get closer to your next opportunity.</span>
     </footer>
 
+    <!-- ===================== JS: SCROLL REVEAL ===================== -->
+    <script>
+        // Simple scroll-based reveal using IntersectionObserver
+        (function () {
+            const revealElements = document.querySelectorAll(".reveal, .feature-card, .step-card, .testimonial-card, .faq-item");
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("in-view");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12
+                });
+
+                revealElements.forEach(el => observer.observe(el));
+            } else {
+                // Fallback: make everything visible if IntersectionObserver is not supported
+                revealElements.forEach(el => el.classList.add("in-view"));
+            }
+        })();
+    </script>
 </body>
 </html>
+
 
 
